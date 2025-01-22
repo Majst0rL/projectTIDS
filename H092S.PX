@@ -1,0 +1,78 @@
+CHARSET="ANSI";
+AXIS-VERSION="2013";
+CODEPAGE="windows-1250";
+LANGUAGE="sl";
+LANGUAGES="sl","en";
+CREATION-DATE="20161215 10:30";
+DECIMALS=14;
+SHOWDECIMALS=2;
+MATRIX="H092S";
+SUBJECT-CODE="H092";
+SUBJECT-AREA="Izobraževanje - Education";
+SUBJECT-AREA[en]="Education";
+COPYRIGHT=YES;
+DESCRIPTION="Delež javnih izdatkov za formalno izobraževanje v BDP (%), po ravneh izobraževanja, Slovenija, letno";
+DESCRIPTION[en]="The share of public expenditure for formal education in GDP (%), by level of education, Slovenia, annually";
+TITLE="Delež javnih izdatkov za formalno izobraževanje v BDP (%) po: RAVEN IZOBRAŽEVANJA, LETO";
+TITLE[en]="The share of public expenditure for formal education in GDP (%) by LEVEL OF EDUCATION and YEAR";
+CONTENTS="Delež javnih izdatkov za formalno izobraževanje v BDP (%)";
+CONTENTS[en]="The share of public expenditure for formal education in GDP (%)";
+UNITS="%";
+UNITS[en]="%";
+STUB="RAVEN IZOBRAŽEVANJA";
+STUB[en]="LEVEL OF EDUCATION";
+HEADING="LETO";
+HEADING[en]="YEAR";
+VALUES("RAVEN IZOBRAŽEVANJA")="Raven izobraževanja - SKUPAJ","Predšolsko izobraževanje",
+"Osnovnošolsko izobraževanje","Srednješolsko izobraževanje","Terciarno izobraževanje";
+VALUES[en]("LEVEL OF EDUCATION")="Level of education - TOTAL","Preschool education",
+"Basic education","Upper secondary education","Tertiary education";
+VALUES("LETO")="2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019",
+"2020","2021","2022","2023";
+VALUES[en]("YEAR")="2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",
+"2019","2020","2021","2022","2023";
+TIMEVAL("LETO")=TLIST(A1),"2008","2009","2010","2011","2012","2013","2014","2015","2016","2017",
+"2018","2019","2020","2021","2022","2023";
+TIMEVAL[en]("YEAR")=TLIST(A1),"2008","2009","2010","2011","2012","2013","2014","2015","2016","2017",
+"2018","2019","2020","2021","2022","2023";
+CODES("RAVEN IZOBRAŽEVANJA")="ISCED_TOTAL","ISCED_0","ISCED_1_2","ISCED_3","ISCED_5_6_7_8";
+CODES[en]("LEVEL OF EDUCATION")="ISCED_TOTAL","ISCED_0","ISCED_1_2","ISCED_3","ISCED_5_6_7_8";
+CODES("LETO")="2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019",
+"2020","2021","2022","2023";
+CODES[en]("YEAR")="2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018",
+"2019","2020","2021","2022","2023";
+LAST-UPDATED="20241218 10:30";
+CONTACT="Statistièni urad RS, T: (01) 241 64 04, E: gp.surs@gov.si";
+CONTACT[en]="Statistical Office of the Republic of Slovenia, T: +386 1 241 64 04, E: gp.surs@gov.si";
+DATABASE="SI-STAT";
+DATABASE[en]="SI-STAT";
+SOURCE="Statistièni urad Republike Slovenije";
+SOURCE[en]="Statistical Office of the Republic of Slovenia";
+NOTEX="#V letu 2012 je prišlo do preloma v èasovni vrsti. Glede na spremenjeno mednarodno definicijo formalnega izobraževanja v skladu z revidirano mednarodno klasifikacijo ravni izobraževanja/izobrazbe ISCED 2011 so med izdatki za formalno izobraževanje "
+"za leto 2012 upoštevani tudi izdatki za programe 1. starostnega obdobja vzgoje in izobraževanja v vrtcih, medtem ko so bili glede na prejšnjo definicijo (v skladu z ISCED 97) upoštevani le izdatki za programe 2. starostnega obdobja vzgoje in "
+"izobraževanja v vrtcih.#Od leta 2018, so, kot del javnih izdatkov za izobraževanje, prišteti   nekateri transferji gospodinjstvom, ki v preteklih letih niso bili vkljuèeni. Zato podatki o obsegu  javnih izdatkov za formalno izobraževanje in njihovem "
+"deležu v BDP   od leta 2018 niso neposredno primerljivi s temi podatki za pretekla leta.#V letu 2020 je prišlo do preloma v èasovni vrsti. Dopolnjen je bil zajem izobraževalnih ustanov;  Pri izobraževalnih ustanovah, ki izvajajo programe formalnega "
+"(stopenjskega)  izobraževanja odraslih, pa so bili, kot  del prihodkov iz zasebnih virov, dodatno upoštevani tudi prihodki iz tržne dejavnosti. Zaradi navedenih  sprememb  podatki o sredstvih za izobraževalne ustanove  in posledièno podatki o javnih "
+"izdatkih za formalno izobraževanje za leta od 2020 niso neposredno primerljivi s temi podatki iz preteklih let.";
+NOTEX[en]="#In 2012 there was a break in the time series. According to the revised international definition of formal education which is in line with the revised international classification of levels of education ISCED 2011, the expenditure for formal "
+"education for 2012 takes into account the expenditure for the 1st age period of education in kindergartens, while according to the previous definition (ISCED 97) only expenditure for the 2nd age period programs of education in kindergartens was "
+"considered.#From 2018, some transfers to households that were not included in previous years are considered as part of public expenditure on education. Therefore, data on public expenditure on formal education from 2018 on are not directly comparable to "
+"that for previous years.#In 2020 there was a break in the time series.  The coverage of educational institutions was supplemented; As part of revenues from private sources, additional revenues from market activities in educational institutions that "
+"implement formal, continuing adult education programs were also taken into account. Due to these changes, the data on funding for educational institutions and consequently data on public expenditure for formal education from 2020 on are not directly "
+"comparable with these data from previous years.#";
+VALUENOTEX("LETO","2012")="Prelom v èasovni vrsti. Glej opombe!";
+VALUENOTEX[en]("YEAR","2012")="A break in time series. See footnotes!";
+VALUENOTEX("LETO","2020")="Prelom v èasovni vrsti. Glej opombe!";
+VALUENOTEX[en]("YEAR","2020")="A break in time series. See footnotes!";
+DATASYMBOL1="N";
+DATASYMBOL1[en]="N";
+DATASYMBOL2="-";
+DATASYMBOL2[en]="-";
+DATASYMBOL4="z";
+DATASYMBOL4[en]="z";
+DATA=
+5.13439404377087 5.6208456600614 5.5935951845996 5.58292915012778 5.67016171035788 5.46772267695125 5.34328406804218 4.95527384267678 4.84420390373129 4.82386590498534 4.97953870263077 4.93483173509606 5.41897391372189 5.39163282257394 5.28063159082449 5.13879707321746 
+0.48296592655397 0.5550823332403 0.57478849407783 0.629750965146 0.98361355123282 0.96231171444351 0.99970790158568 0.85854262222684 0.81965530202684 0.82296285278592 0.81089991665325 0.80515867340476 0.90259799684421 0.86968041125021 0.88039257931237 0.8207176010671 
+2.32218483387208 2.45846497348591 2.44775456991484 2.40557881572508 2.42310104886737 2.34335226825005 2.314831882697 2.15420572296981 2.13778017644266 2.11451186158358 2.21155542220073 2.18168521228231 2.38147156724006 2.40661451862217 2.34140594582337 2.25805044818755 
+1.13273011499126 1.23974602288585 1.22216582064298 1.19223261377848 1.05556462681583 1.03405684019776 0.96902784202195 0.95400845846106 0.92760323894734 0.92514502521994 0.93221330773591 0.91776459560179 0.97117032321481 0.9890928750105 0.9492241498379 0.92197536237917 
+1.19622171586031 1.36313145408875 1.34507225874456 1.35104942634985 1.20424124673012 1.12272860970651 1.05602377988248 0.98458468332727 0.95624929148027 0.95404019237537 1.02143312189809 1.02753727562657 1.16373402638217 1.12624501769104 1.10960891586315 1.13805366159485; 

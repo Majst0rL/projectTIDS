@@ -1,0 +1,282 @@
+[
+    {
+        "title": "The Night Before Christmas",
+        "author": "Clement Clarke Moore",
+        "genre": "Santa in juvenile prison",
+        "year": 1857,
+        "rating": "N/A"
+    },
+    {
+        "title": "The Wonderful Wizard of Oz",
+        "author": "L. Frank Baum",
+        "genre": "Witches",
+        "year": 1899,
+        "rating": "N/A"
+    },
+    {
+        "title": "Hans Andersen's Fairy Tales",
+        "author": "Hans Christian Andersen",
+        "genre": "Miniature books",
+        "year": 1846,
+        "rating": "N/A"
+    },
+    {
+        "title": "Emma",
+        "author": "Jane Austen",
+        "genre": "Social life and customs",
+        "year": 1815,
+        "rating": "N/A"
+    },
+    {
+        "title": "Lady Susan",
+        "author": "Jane Austen",
+        "genre": "Fiction",
+        "year": 1925,
+        "rating": "N/A"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Fiction, Romance, Historical, Regency",
+        "year": 1813,
+        "rating": "N/A"
+    },
+    {
+        "title": "A Christmas Carol",
+        "author": "Charles Dickens",
+        "genre": "Ghost stories",
+        "year": 1843,
+        "rating": "N/A"
+    },
+    {
+        "title": "A Tale of Two Cities",
+        "author": "Charles Dickens, Aedi Abraham, Juan Ramon Torregrosa, Francisco Manuel GRANADO CASTRO, Hablot K. BROWNE, Fred BARNARD, Alejo García Moreno, Salustiano Masó Simón, Juan Ramon Torregrosa Torregrosa, Victor G Ambrus, Laura Santamaria, Laura Santamaria, J. J. Bernier, maxi sanchez, jaime arbe, Marion Leighton, Miguel Muñoz, Julius Julius Seybt, Julius Seybt",
+        "genre": "British",
+        "year": 1800,
+        "rating": "N/A"
+    },
+    {
+        "title": "Treasure Island",
+        "author": "Robert Louis Stevenson",
+        "genre": "Fiction",
+        "year": 1880,
+        "rating": "N/A"
+    },
+    {
+        "title": "Adventures of Huckleberry Finn",
+        "author": "Mark Twain",
+        "genre": "adventure and adventurers",
+        "year": 1876,
+        "rating": "N/A"
+    },
+    {
+        "title": "The Complete Sherlock Holmes [4 novels, 56 stories]",
+        "author": "Arthur Conan Doyle",
+        "genre": "Action & Adventure Fiction",
+        "year": 1900,
+        "rating": "N/A"
+    },
+    {
+        "title": "The Pilgrim's Progress",
+        "author": "John Bunyan",
+        "genre": "Bibliography",
+        "year": 1678,
+        "rating": "N/A"
+    },
+    {
+        "title": "[William Wheeler Hubbell, authorized to apply for patents.]",
+        "author": "United States. Congress. Senate. Committee on Patents",
+        "genre": "Administration of Justice",
+        "year": 1858,
+        "rating": "N/A"
+    },
+    {
+        "title": "L’étranger",
+        "author": "Albert Camus",
+        "genre": "Murder",
+        "year": 1942,
+        "rating": "N/A"
+    },
+    {
+        "title": "The Raven",
+        "author": "Edgar Allan Poe",
+        "genre": "busts",
+        "year": 1845,
+        "rating": "N/A"
+    },
+    {
+        "title": "Brideshead Revisited",
+        "author": "Evelyn Waugh",
+        "genre": "Catholics",
+        "year": 1945,
+        "rating": "N/A"
+    },
+    {
+        "title": "Georg Baselitz",
+        "author": "Georg Baselitz, Rainer M. Mason, Jeremy Lewison, Detlev Gretenkort, Michael Auping, Goerg Simmel, Richard Shiff, Andreas Franzke, Edward Quinn",
+        "genre": "Expositions",
+        "year": 1970,
+        "rating": "N/A"
+    },
+    {
+        "title": "El coronel no tiene quien le escriba",
+        "author": "Gabriel García Márquez",
+        "genre": "Fiction",
+        "year": 1961,
+        "rating": "N/A"
+    },
+    {
+        "title": "A Confederacy of Dunces",
+        "author": "John Kennedy Toole",
+        "genre": "mothers",
+        "year": 1980,
+        "rating": "N/A"
+    },
+    {
+        "title": "Love and Freindship",
+        "author": "Jane Austen",
+        "genre": "Fiction, classics",
+        "year": 1995,
+        "rating": "N/A"
+    },
+    {
+        "title": "Ten Apples Up on Top",
+        "author": "Dr. Seuss",
+        "genre": "Juvenile fiction",
+        "year": 1961,
+        "rating": "N/A"
+    },
+    {
+        "title": "The Waste Lands",
+        "author": "Stephen King",
+        "genre": "thrillers",
+        "year": 1991,
+        "rating": "N/A"
+    },
+    {
+        "title": "Their Eyes Were Watching God",
+        "author": "Zora Neale Hurston",
+        "genre": "African American women",
+        "year": 1937,
+        "rating": "N/A"
+    },
+    {
+        "title": "Ubik",
+        "author": "Philip K. Dick",
+        "genre": "Fiction",
+        "year": 1969,
+        "rating": "N/A"
+    },
+    {
+        "title": "Wo Ist der Kleine Hund Chase?",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Où Est le Chien Chase?",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Dentist's Games",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Wo Ist der Kleine Hund Chase? Dorfausgabe",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Where Is Doggy Chase? a Fun Search and Find Book for 2-4 Years Old Brilliant Kids",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Wo Ist der Kleine Hund Chase? Hause Auflage",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Where Is Doggy Chase? Jungle Edition. a Fun Search and Find Book for 2-4 Years Old Brilliant Kids",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "ZÄhlen Sie Die Tiere",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "¿dónde Está Chase? el Pueblo",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "¿dónde Está Chase? el Castillo",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Où Est le Chien Chase? le Village",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Where Is Doggy Chase? Castle Edition. a Fun Search and Find Book for 2-4 Years Old Brilliant Kids",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Dov'è Chase? Città",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Where Is Doggy Chase? Home Edition",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Libro de Colorear para niños y ni&#324;as Brillantes",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    },
+    {
+        "title": "Où Est le Chien Chase? la Maison",
+        "author": "Top Books",
+        "genre": "Unknown",
+        "year": 2020,
+        "rating": "N/A"
+    }
+]
