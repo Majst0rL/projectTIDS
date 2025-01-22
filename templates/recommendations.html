@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Search Books</a>
+        <a href="/top100">Top 100 Books</a>
+        <a href="/recommendations">Recommendations</a>
+    </nav>
+    <h1>Book Recommendations</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book['title'] }} by {{ book['author'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

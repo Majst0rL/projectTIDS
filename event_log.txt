@@ -1,0 +1,165 @@
+2025-01-22 15:56:52,243 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-22 15:56:52,243 - [33mPress CTRL+C to quit[0m
+2025-01-22 15:56:52,244 -  * Restarting with stat
+2025-01-22 15:56:52,694 -  * Debugger is active!
+2025-01-22 15:56:52,697 -  * Debugger PIN: 496-292-189
+2025-01-22 15:57:38,173 -  * Restarting with stat
+2025-01-22 15:57:38,661 -  * Debugger is active!
+2025-01-22 15:57:38,663 -  * Debugger PIN: 496-292-189
+2025-01-22 15:57:38,680 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 15:58:31,195 - Google Books data retrieved
+2025-01-22 15:58:31,217 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-22 15:58:31,334 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-22 15:58:31,364 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-22 15:58:31,398 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-01-22 15:58:31,412 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-22 15:58:31,879 - 127.0.0.1 - - [22/Jan/2025 15:58:31] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-22 15:59:15,414 -  * Detected change in 'E:\\Python\\projectTIDS\\app\\__init__.py', reloading
+2025-01-22 15:59:15,481 -  * Restarting with stat
+2025-01-22 15:59:17,758 -  * Restarting with stat
+2025-01-22 15:59:18,227 -  * Debugger is active!
+2025-01-22 15:59:18,230 -  * Debugger PIN: 496-292-189
+2025-01-22 15:59:18,250 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 15:59:22,247 - Google Books data retrieved
+2025-01-22 15:59:22,266 - 127.0.0.1 - - [22/Jan/2025 15:59:22] "GET / HTTP/1.1" 200 -
+2025-01-22 15:59:22,293 - 127.0.0.1 - - [22/Jan/2025 15:59:22] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 15:59:22,456 - 127.0.0.1 - - [22/Jan/2025 15:59:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-22 15:59:30,379 - Google Books data retrieved
+2025-01-22 15:59:30,394 - 127.0.0.1 - - [22/Jan/2025 15:59:30] "GET /?query=game HTTP/1.1" 200 -
+2025-01-22 15:59:30,435 - 127.0.0.1 - - [22/Jan/2025 15:59:30] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:02:40,348 - Google Books data retrieved
+2025-01-22 16:02:40,352 - 127.0.0.1 - - [22/Jan/2025 16:02:40] "GET /?query=game HTTP/1.1" 200 -
+2025-01-22 16:02:40,387 - 127.0.0.1 - - [22/Jan/2025 16:02:40] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:03:03,274 -  * Detected change in 'E:\\Python\\projectTIDS\\app\\services\\data_fetcher.py', reloading
+2025-01-22 16:03:03,402 -  * Restarting with stat
+2025-01-22 16:03:04,056 -  * Debugger is active!
+2025-01-22 16:03:04,058 -  * Debugger PIN: 496-292-189
+2025-01-22 16:03:04,079 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:03:07,512 - Google Books data retrieved
+2025-01-22 16:03:07,518 - 127.0.0.1 - - [22/Jan/2025 16:03:07] "GET /?query=game HTTP/1.1" 200 -
+2025-01-22 16:03:07,552 - 127.0.0.1 - - [22/Jan/2025 16:03:07] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:03:23,768 - Top 100 books retrieved from COBISS
+2025-01-22 16:03:23,770 - 127.0.0.1 - - [22/Jan/2025 16:03:23] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:03:23,818 - 127.0.0.1 - - [22/Jan/2025 16:03:23] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:03:26,833 - Recommendations retrieved via gRPC
+2025-01-22 16:03:26,835 - 127.0.0.1 - - [22/Jan/2025 16:03:26] "GET /recommendations HTTP/1.1" 200 -
+2025-01-22 16:03:26,869 - 127.0.0.1 - - [22/Jan/2025 16:03:26] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:03:29,822 - Top 100 books retrieved from COBISS
+2025-01-22 16:03:29,822 - 127.0.0.1 - - [22/Jan/2025 16:03:29] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:03:29,861 - 127.0.0.1 - - [22/Jan/2025 16:03:29] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:06:38,772 -  * Detected change in 'E:\\Python\\projectTIDS\\app\\services\\data_fetcher.py', reloading
+2025-01-22 16:06:38,834 -  * Restarting with stat
+2025-01-22 16:06:39,357 -  * Debugger is active!
+2025-01-22 16:06:39,359 -  * Debugger PIN: 496-292-189
+2025-01-22 16:06:39,380 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:06:41,719 - Top 100 books retrieved from COBISS
+2025-01-22 16:06:41,724 - 127.0.0.1 - - [22/Jan/2025 16:06:41] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:06:41,760 - 127.0.0.1 - - [22/Jan/2025 16:06:41] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:06:45,589 - Top 100 books retrieved from COBISS
+2025-01-22 16:06:45,590 - 127.0.0.1 - - [22/Jan/2025 16:06:45] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:06:45,628 - 127.0.0.1 - - [22/Jan/2025 16:06:45] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:06:47,285 - Google Books data retrieved
+2025-01-22 16:06:47,288 - 127.0.0.1 - - [22/Jan/2025 16:06:47] "GET / HTTP/1.1" 200 -
+2025-01-22 16:06:47,329 - 127.0.0.1 - - [22/Jan/2025 16:06:47] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:07:02,730 - Google Books data retrieved
+2025-01-22 16:07:02,731 - 127.0.0.1 - - [22/Jan/2025 16:07:02] "GET /?query= HTTP/1.1" 200 -
+2025-01-22 16:07:02,781 - 127.0.0.1 - - [22/Jan/2025 16:07:02] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:07:07,407 - Google Books data retrieved
+2025-01-22 16:07:07,408 - 127.0.0.1 - - [22/Jan/2025 16:07:07] "GET /?query=samar HTTP/1.1" 200 -
+2025-01-22 16:07:07,459 - 127.0.0.1 - - [22/Jan/2025 16:07:07] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:07:14,602 - Google Books data retrieved
+2025-01-22 16:07:14,603 - 127.0.0.1 - - [22/Jan/2025 16:07:14] "GET /?query=samar HTTP/1.1" 200 -
+2025-01-22 16:07:14,637 - 127.0.0.1 - - [22/Jan/2025 16:07:14] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:07:43,462 - Google Books data retrieved
+2025-01-22 16:07:43,463 - 127.0.0.1 - - [22/Jan/2025 16:07:43] "GET / HTTP/1.1" 200 -
+2025-01-22 16:07:43,512 - 127.0.0.1 - - [22/Jan/2025 16:07:43] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:21:46,512 -  * Restarting with stat
+2025-01-22 16:21:46,995 -  * Debugger is active!
+2025-01-22 16:21:46,997 -  * Debugger PIN: 496-292-189
+2025-01-22 16:21:47,015 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:21:52,052 - 127.0.0.1 - - [22/Jan/2025 16:21:52] "GET / HTTP/1.1" 200 -
+2025-01-22 16:21:54,730 - 127.0.0.1 - - [22/Jan/2025 16:21:54] "GET / HTTP/1.1" 200 -
+2025-01-22 16:21:57,783 - Search performed with query: 
+2025-01-22 16:21:57,786 - 127.0.0.1 - - [22/Jan/2025 16:21:57] "GET /search HTTP/1.1" 200 -
+2025-01-22 16:22:04,624 - Search performed with query: game of thrones
+2025-01-22 16:22:04,626 - 127.0.0.1 - - [22/Jan/2025 16:22:04] "GET /search?query=game+of+thrones HTTP/1.1" 200 -
+2025-01-22 16:22:18,322 - 127.0.0.1 - - [22/Jan/2025 16:22:18] "GET / HTTP/1.1" 200 -
+2025-01-22 16:22:20,972 - Filtered top 100 books retrieved
+2025-01-22 16:22:20,976 - 127.0.0.1 - - [22/Jan/2025 16:22:20] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:22:25,172 - Filtered top 100 books retrieved
+2025-01-22 16:22:25,173 - 127.0.0.1 - - [22/Jan/2025 16:22:25] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:22:30,142 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "[35m[1mGET /recommendations?genre=non-fiction HTTP/1.1[0m" 500 -
+2025-01-22 16:22:30,302 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "GET /recommendations?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-22 16:22:30,305 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "GET /recommendations?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-22 16:22:30,315 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "GET /recommendations?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2025-01-22 16:22:30,317 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "GET /recommendations?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-22 16:22:30,424 - 127.0.0.1 - - [22/Jan/2025 16:22:30] "GET /recommendations?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-22 16:24:52,579 - Recommendations retrieved for genre: 
+2025-01-22 16:24:52,583 - 127.0.0.1 - - [22/Jan/2025 16:24:52] "GET /recommendations HTTP/1.1" 200 -
+2025-01-22 16:24:52,640 - 127.0.0.1 - - [22/Jan/2025 16:24:52] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:24:58,925 - Filtered top 100 books retrieved
+2025-01-22 16:24:58,926 - 127.0.0.1 - - [22/Jan/2025 16:24:58] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:25:29,327 - Filtered top 100 books retrieved
+2025-01-22 16:25:29,329 - 127.0.0.1 - - [22/Jan/2025 16:25:29] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:26:00,135 - 127.0.0.1 - - [22/Jan/2025 16:26:00] "GET / HTTP/1.1" 200 -
+2025-01-22 16:31:50,876 -  * Detected change in 'E:\\Python\\projectTIDS\\app\\routes.py', reloading
+2025-01-22 16:31:50,932 -  * Restarting with stat
+2025-01-22 16:31:51,444 -  * Debugger is active!
+2025-01-22 16:31:51,446 -  * Debugger PIN: 496-292-189
+2025-01-22 16:31:51,465 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:32:08,154 - 127.0.0.1 - - [22/Jan/2025 16:32:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-22 16:32:11,633 - 127.0.0.1 - - [22/Jan/2025 16:32:11] "GET / HTTP/1.1" 200 -
+2025-01-22 16:32:14,242 - 127.0.0.1 - - [22/Jan/2025 16:32:14] "GET / HTTP/1.1" 200 -
+2025-01-22 16:32:16,317 - Filtered top 100 books retrieved
+2025-01-22 16:32:16,319 - 127.0.0.1 - - [22/Jan/2025 16:32:16] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:34:50,335 -  * Detected change in 'E:\\Python\\projectTIDS\\app\\routes.py', reloading
+2025-01-22 16:34:50,403 -  * Restarting with stat
+2025-01-22 16:34:50,942 -  * Debugger is active!
+2025-01-22 16:34:50,944 -  * Debugger PIN: 496-292-189
+2025-01-22 16:34:50,965 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:35:20,802 -  * Restarting with stat
+2025-01-22 16:35:21,268 -  * Debugger is active!
+2025-01-22 16:35:21,270 -  * Debugger PIN: 496-292-189
+2025-01-22 16:35:21,291 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:35:25,518 - Home page accessed
+2025-01-22 16:35:25,524 - 127.0.0.1 - - [22/Jan/2025 16:35:25] "GET / HTTP/1.1" 200 -
+2025-01-22 16:35:34,265 - Filtered top 100 books retrieved
+2025-01-22 16:35:34,268 - 127.0.0.1 - - [22/Jan/2025 16:35:34] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:36:48,370 - Filtered top 100 books retrieved
+2025-01-22 16:36:48,370 - 127.0.0.1 - - [22/Jan/2025 16:36:48] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:36:50,715 - Home page accessed
+2025-01-22 16:36:50,716 - 127.0.0.1 - - [22/Jan/2025 16:36:50] "GET / HTTP/1.1" 200 -
+2025-01-22 16:37:07,588 - Search performed with query: 
+2025-01-22 16:37:07,592 - 127.0.0.1 - - [22/Jan/2025 16:37:07] "GET /search HTTP/1.1" 200 -
+2025-01-22 16:37:18,017 - Search performed with query: harry potter
+2025-01-22 16:37:18,018 - 127.0.0.1 - - [22/Jan/2025 16:37:18] "GET /search?query=harry+potter HTTP/1.1" 200 -
+2025-01-22 16:38:15,478 - Search performed with query: harry potter
+2025-01-22 16:38:15,479 - 127.0.0.1 - - [22/Jan/2025 16:38:15] "GET /search?query=harry+potter HTTP/1.1" 200 -
+2025-01-22 16:38:18,820 - Search performed with query: 
+2025-01-22 16:38:18,821 - 127.0.0.1 - - [22/Jan/2025 16:38:18] "GET /search?query= HTTP/1.1" 200 -
+2025-01-22 16:38:21,191 - Home page accessed
+2025-01-22 16:38:21,194 - 127.0.0.1 - - [22/Jan/2025 16:38:21] "GET / HTTP/1.1" 200 -
+2025-01-22 16:41:54,914 -  * Restarting with stat
+2025-01-22 16:41:55,374 -  * Debugger is active!
+2025-01-22 16:41:55,376 -  * Debugger PIN: 496-292-189
+2025-01-22 16:41:55,393 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2025-01-22 16:41:59,635 - Home page accessed
+2025-01-22 16:41:59,639 - 127.0.0.1 - - [22/Jan/2025 16:41:59] "GET / HTTP/1.1" 200 -
+2025-01-22 16:42:01,881 - Filtered top 100 books retrieved
+2025-01-22 16:42:01,883 - 127.0.0.1 - - [22/Jan/2025 16:42:01] "GET /top100 HTTP/1.1" 200 -
+2025-01-22 16:42:04,325 - Search performed with query: 
+2025-01-22 16:42:04,328 - 127.0.0.1 - - [22/Jan/2025 16:42:04] "GET /search HTTP/1.1" 200 -
+2025-01-22 16:42:09,361 - Search performed with query: tsc
+2025-01-22 16:42:09,362 - 127.0.0.1 - - [22/Jan/2025 16:42:09] "GET /search?query=tsc HTTP/1.1" 200 -
+2025-01-22 16:42:28,797 - Search performed with query: harry potter
+2025-01-22 16:42:28,798 - 127.0.0.1 - - [22/Jan/2025 16:42:28] "GET /search?query=harry+potter HTTP/1.1" 200 -
+2025-01-22 16:42:56,410 - Home page accessed
+2025-01-22 16:42:56,411 - 127.0.0.1 - - [22/Jan/2025 16:42:56] "GET / HTTP/1.1" 200 -
+2025-01-22 16:42:56,958 - Recommendations retrieved for genre: 
+2025-01-22 16:42:56,962 - 127.0.0.1 - - [22/Jan/2025 16:42:56] "GET /recommendations HTTP/1.1" 200 -
+2025-01-22 16:42:57,006 - 127.0.0.1 - - [22/Jan/2025 16:42:57] "[33mGET /static/css/styles.css HTTP/1.1[0m" 404 -
+2025-01-22 16:43:34,502 - Home page accessed
+2025-01-22 16:43:34,506 - 127.0.0.1 - - [22/Jan/2025 16:43:34] "GET / HTTP/1.1" 200 -
+2025-01-22 16:43:40,947 - Home page accessed
+2025-01-22 16:43:40,948 - 127.0.0.1 - - [22/Jan/2025 16:43:40] "GET / HTTP/1.1" 200 -
