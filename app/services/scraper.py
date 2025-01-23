@@ -5,10 +5,10 @@ import json
 
 
 def scrape_cobiss():
-    driver_path = "C:\\Users\\majst\\Downloads\\edgedriver_win64\\msedgedriver.exe"  # Pravilna pot
+    driver_path = "C:\\Programiq\\EdgeDriver\\msedgedriver.exe"  # Pravilna pot
     service = Service(driver_path)
 
-    # Inicializirajte EdgeDriver
+    # Edge driver
     driver = Edge(service=service)
     driver.get(
         "https://plus.cobiss.net/most-read-web/si/sl?utm_source=chatgpt.com#libAcronym&libType&periodFrom=202412&periodTo=202412&pubType=1&publishYear")
@@ -17,7 +17,6 @@ def scrape_cobiss():
 
     books = []
 
-    # Poiščite tabelo
     rows = driver.find_elements(By.CSS_SELECTOR, "#book-table tbody tr")
     for row in rows:
         columns = row.find_elements(By.TAG_NAME, "td")
@@ -30,7 +29,7 @@ def scrape_cobiss():
 
     driver.quit()
 
-    # Shrani podatke v JSON
+    # Saving data
     with open("scraped_books.json", "w", encoding="utf-8") as file:
         json.dump(books, file, ensure_ascii=False, indent=4)
 

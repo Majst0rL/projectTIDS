@@ -26,10 +26,9 @@ def get_open_library_books(query):
             {
                 "title": book.get('title', 'N/A'),
                 "author": ', '.join(book.get('author_name', ['Unknown'])),
-                # Extract only the first genre if available
                 "genre": book.get('subject', ['Unknown'])[0] if book.get('subject') else 'Unknown',
                 "year": book.get('first_publish_year', 'N/A'),
-                "rating": "N/A"  # Open Library does not provide ratings
+                "rating": "N/A"
             }
             for book in data.get('docs', [])
         ]

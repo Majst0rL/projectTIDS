@@ -1,10 +1,10 @@
 [
     {
-        "id": 2,
-        "title": "Projekt",
-        "author": "Luka",
-        "genre": "TIDS",
-        "year": "2025",
-        "rating": "10"
+        "id": 1,
+        "title": "test",
+        "author": "test",
+        "genre": "test",
+        "year": "2002",
+        "rating": "5"
     }
 ]

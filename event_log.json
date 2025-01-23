@@ -1,0 +1,8 @@
+[
+    "{\"event\": \"BookAdded\", \"timestamp\": \"2025-01-23T17:27:55.144055\", \"details\": {\"id\": 2, \"title\": \"Test\", \"author\": \"test\", \"genre\": \"test\", \"year\": \"2002\", \"rating\": \"2\"}}",
+    "{\"event\": \"BookDeleted\", \"timestamp\": \"2025-01-23T17:28:37.787814\", \"details\": {\"id\": 2, \"title\": \"Projekt\", \"author\": \"Luka\", \"genre\": \"TIDS\", \"year\": \"2025\", \"rating\": \"10\"}}",
+    "{\"event\": \"BookAdded\", \"timestamp\": \"2025-01-23T17:28:49.150317\", \"details\": {\"id\": 1, \"title\": \"test\", \"author\": \"test\", \"genre\": \"test\", \"year\": \"test\", \"rating\": \"test\"}}",
+    "{\"event\": \"BookAdded\", \"timestamp\": \"2025-01-23T17:28:57.341936\", \"details\": {\"id\": 2, \"title\": \"test\", \"author\": \"test\", \"genre\": \"test\", \"year\": \"test\", \"rating\": \"test\"}}",
+    "{\"event\": \"BookDeleted\", \"timestamp\": \"2025-01-23T17:28:59.363247\", \"details\": {\"id\": 2, \"title\": \"test\", \"author\": \"test\", \"genre\": \"test\", \"year\": \"test\", \"rating\": \"test\"}}",
+    "{\"event\": \"UserAction\", \"description\": \"User triggered an event via RabbitMQ.\"}"
+]

@@ -1,13 +1,12 @@
 #app/routes.py
-
+import datetime
 import json
 import re
 import pandas as pd
 from pyaxis import pyaxis
 from flask import Blueprint, render_template, request, jsonify
 from .services.data_fetcher import get_open_library_books, get_google_books
-from .services.grpc_service import get_recommendations
-from .services.event_bus import log_event
+from .services.event_bus import publish_event
 from .services.scraper import scrape_cobiss
 from .services.data_store import (
     load_books_from_file, save_books_to_file,
@@ -23,34 +22,28 @@ bp = Blueprint('routes', __name__)
 
 @bp.route('/')
 def index():
-    """Fetch and display top books from the Open Library API."""
+    """Fetch and display books from the Open Library API."""
     books = get_open_library_books("top books")
 
-    # Ensure consistent metadata
     for book in books:
         book['rating'] = book.get('rating', 'N/A')
         book['genre'] = book.get('genre', 'Unknown')
         book['author'] = book.get('author', 'Unknown')
-
-    # Save books to the JSON file
     save_books_to_file(WORLD_DATA_FILE, books)
 
-    # Log event
-    log_event("Home page accessed - Top 100 Global Books")
+    # log_event("Home page accessed - Top 100 Global Books")
 
-    # Render the index page with the books
     return render_template('index.html', books=books)
 
 @bp.route('/search')
 def search_books():
     search_query = request.args.get('query', '')
     books = get_google_books(search_query)
-    log_event(f"Search performed with query: {search_query}")
+    # log_event(f"Search performed with query: {search_query}")
     return render_template('search.html', books=books, query=search_query)
 
 @bp.route('/top100', methods=['GET'])
 def top100():
-    # Preberi predhodno shranjene podatke
     try:
         with open("scraped_books.json", "r", encoding="utf-8") as file:
             books = json.load(file)
@@ -61,14 +54,9 @@ def top100():
 
 @bp.route('/top100/scrape', methods=['POST'])
 def scrape_and_update():
-    books = scrape_cobiss()  # Sproži razčlenjevanje
+    #Scraper
+    books = scrape_cobiss()
     return jsonify({"message": "Scraping completed", "books": books}), 200
-@bp.route('/recommendations')
-def recommendations():
-    genre_filter = request.args.get('genre', '')
-    recommendations = get_recommendations(genre_filter)  # Call gRPC service for recommendations
-    log_event(f"Recommendations retrieved for genre: {genre_filter}")
-    return render_template('recommendations.html', books=recommendations, genre_filter=genre_filter)
 
 @bp.route('/mylist', methods=['GET'])
 def my_list():
@@ -89,13 +77,22 @@ def add_to_my_list():
     }
     books.append(new_book)
     save_books_to_file(MY_LIST_DATA_FILE, books)
-    log_event(f"Book added to My List: {new_book['title']} by {new_book['author']}")
+
+    # RabbitMQ event
+    event_message = {
+        "event": "BookAdded",
+        "timestamp": datetime.datetime.now().isoformat(),
+        "details": new_book
+    }
+    publish_event("user_actions", event_message)
+
     return jsonify({"message": "Book added successfully"}), 201
 
 @bp.route('/mylist/<int:book_id>', methods=['PUT'])
 def update_my_list(book_id):
     books = load_books_from_file(MY_LIST_DATA_FILE)
     data = request.json
+    updated_book = None
     for book in books:
         if book['id'] == book_id:
             book.update({
@@ -105,23 +102,41 @@ def update_my_list(book_id):
                 "year": data.get('year', book['year']),
                 "rating": data.get('rating', book['rating'])
             })
-            save_books_to_file(MY_LIST_DATA_FILE, books)
-            log_event(f"Book updated in My List: {book['title']} by {book['author']}")
-            return jsonify({"message": "Book updated successfully"}), 200
-    return jsonify({"error": "Book not found"}), 404
+            updated_book = book
+            break
+    save_books_to_file(MY_LIST_DATA_FILE, books)
+
+    # RabbitMQ event
+    if updated_book:
+        event_message = {
+            "event": "BookUpdated",
+            "timestamp": datetime.datetime.now().isoformat(),
+            "details": updated_book
+        }
+        publish_event("user_actions", event_message)
+
+    return jsonify({"message": "Book updated successfully"}), 200
 
 @bp.route('/mylist/<int:book_id>', methods=['DELETE'])
 def delete_from_my_list(book_id):
     books = load_books_from_file(MY_LIST_DATA_FILE)
+    book_to_delete = next((book for book in books if book['id'] == book_id), None)
     books = [book for book in books if book['id'] != book_id]
     save_books_to_file(MY_LIST_DATA_FILE, books)
-    log_event(f"Book with ID {book_id} deleted from My List")
-    return jsonify({"message": "Book deleted successfully"}), 200
 
+    # RabbitMQ event
+    if book_to_delete:
+        event_message = {
+            "event": "BookDeleted",
+            "timestamp": datetime.datetime.now().isoformat(),
+            "details": book_to_delete
+        }
+        publish_event("user_actions", event_message)
+
+    return jsonify({"message": "Book deleted successfully"}), 200
 
 @bp.route('/opendata')
 def open_data():
-    """Render the Open Data visualization page."""
     return render_template('open_data.html')
 
 def parse_px_to_csv(file_path):
@@ -133,22 +148,18 @@ def parse_px_to_csv(file_path):
             data_df = parsed_data["DATA"]
             metadata = parsed_data.get("METADATA", {})
 
-            # Očisti imena stolpcev in jih popravi
             data_df.columns = [col.encode('latin1').decode('utf-8', errors='ignore') for col in data_df.columns]
             print("Imena stolpcev pred popravljanjem:", data_df.columns.tolist())
 
-            # Preimenuj napačno interpretirane stolpce
             rename_mapping = {
                 "RAVEN IZOBRAEVANJA": "RAVEN IZOBRAŽEVANJA",
             }
             data_df.rename(columns=rename_mapping, inplace=True)
             print("Imena stolpcev po popravljanju:", data_df.columns.tolist())
 
-            # Preveri, če stolpec obstaja po preimenovanju
             if "RAVEN IZOBRAŽEVANJA" not in data_df.columns:
                 raise ValueError(f"Stolpec 'RAVEN IZOBRAŽEVANJA' manjka tudi po preimenovanju. Na voljo so: {data_df.columns.tolist()}")
 
-            # Shrani podatke in metapodatke
             data_df.to_csv(OUTPUT_CSV, index=False, encoding="utf-8")
             pd.DataFrame.from_dict(metadata, orient="index").to_csv(METADATA_CSV, header=False)
 
@@ -169,10 +180,8 @@ def get_open_data():
         if data is None:
             return jsonify({"error": "Failed to parse PCAXIS data."}), 500
 
-        # Popravi imena stolpcev
         data.columns = [col.strip().replace("", "Ž") for col in data.columns]
 
-        # Pridobi unikatne vrednosti let in kategorij
         years = sorted(data["LETO"].unique())
         categories = data["RAVEN IZOBRAŽEVANJA"].unique()
 

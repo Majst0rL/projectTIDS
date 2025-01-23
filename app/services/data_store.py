@@ -11,6 +11,5 @@ def load_books_from_file(file_path):
         return json.load(file)
 
 def save_books_to_file(file_path, books):
-    """Save books to a JSON file."""
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(books, file, ensure_ascii=False, indent=4)
