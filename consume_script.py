@@ -3,6 +3,7 @@ from app.services.event_bus import consume_event
 
 EVENT_LOG_FILE = "event_log.json"
 
+
 def handle_message(message):
     print("Received message:", message)
 
@@ -16,6 +17,7 @@ def handle_message(message):
 
     with open(EVENT_LOG_FILE, "w", encoding="utf-8") as file:
         json.dump(event_log, file, indent=4)
+
 
 if __name__ == "__main__":
     print("Waiting for messages from RabbitMQ...")

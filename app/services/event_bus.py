@@ -3,11 +3,13 @@ import json
 
 import pika
 
+
 def connect_to_rabbitmq():
     #localhost
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
     channel = connection.channel()
     return connection, channel
+
 
 def consume_event(queue_name, callback):
     connection, channel = connect_to_rabbitmq()
@@ -32,4 +34,3 @@ def publish_event(queue, message):
     channel.queue_declare(queue=queue)
     channel.basic_publish(exchange='', routing_key=queue, body=json.dumps(message))
     connection.close()
-

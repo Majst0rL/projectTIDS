@@ -20,6 +20,7 @@ METADATA_CSV = "metadata.csv"
 
 bp = Blueprint('routes', __name__)
 
+
 @bp.route('/')
 def index():
     """Fetch and display books from the Open Library API."""
@@ -35,12 +36,14 @@ def index():
 
     return render_template('index.html', books=books)
 
+
 @bp.route('/search')
 def search_books():
     search_query = request.args.get('query', '')
     books = get_google_books(search_query)
     # log_event(f"Search performed with query: {search_query}")
     return render_template('search.html', books=books, query=search_query)
+
 
 @bp.route('/top100', methods=['GET'])
 def top100():
@@ -52,16 +55,19 @@ def top100():
 
     return render_template('top100.html', books=books)
 
+
 @bp.route('/top100/scrape', methods=['POST'])
 def scrape_and_update():
     #Scraper
     books = scrape_cobiss()
     return jsonify({"message": "Scraping completed", "books": books}), 200
 
+
 @bp.route('/mylist', methods=['GET'])
 def my_list():
     books = load_books_from_file(MY_LIST_DATA_FILE)
     return render_template('my_list.html', books=books)
+
 
 @bp.route('/mylist', methods=['POST'])
 def add_to_my_list():
@@ -87,6 +93,7 @@ def add_to_my_list():
     publish_event("user_actions", event_message)
 
     return jsonify({"message": "Book added successfully"}), 201
+
 
 @bp.route('/mylist/<int:book_id>', methods=['PUT'])
 def update_my_list(book_id):
@@ -117,6 +124,7 @@ def update_my_list(book_id):
 
     return jsonify({"message": "Book updated successfully"}), 200
 
+
 @bp.route('/mylist/<int:book_id>', methods=['DELETE'])
 def delete_from_my_list(book_id):
     books = load_books_from_file(MY_LIST_DATA_FILE)
@@ -135,9 +143,11 @@ def delete_from_my_list(book_id):
 
     return jsonify({"message": "Book deleted successfully"}), 200
 
+
 @bp.route('/opendata')
 def open_data():
     return render_template('open_data.html')
+
 
 def parse_px_to_csv(file_path):
     """Parse PCAXIS file and save data and metadata to CSV."""
@@ -158,7 +168,8 @@ def parse_px_to_csv(file_path):
             print("Imena stolpcev po popravljanju:", data_df.columns.tolist())
 
             if "RAVEN IZOBRAŽEVANJA" not in data_df.columns:
-                raise ValueError(f"Stolpec 'RAVEN IZOBRAŽEVANJA' manjka tudi po preimenovanju. Na voljo so: {data_df.columns.tolist()}")
+                raise ValueError(
+                    f"Stolpec 'RAVEN IZOBRAŽEVANJA' manjka tudi po preimenovanju. Na voljo so: {data_df.columns.tolist()}")
 
             data_df.to_csv(OUTPUT_CSV, index=False, encoding="utf-8")
             pd.DataFrame.from_dict(metadata, orient="index").to_csv(METADATA_CSV, header=False)
@@ -188,7 +199,8 @@ def get_open_data():
         datasets = []
         for category in categories:
             filtered_data = data[data["RAVEN IZOBRAŽEVANJA"] == category]
-            values = [filtered_data[filtered_data["LETO"] == year]["DATA"].iloc[0] if not filtered_data[filtered_data["LETO"] == year].empty else 0 for year in years]
+            values = [filtered_data[filtered_data["LETO"] == year]["DATA"].iloc[0] if not filtered_data[
+                filtered_data["LETO"] == year].empty else 0 for year in years]
             datasets.append({
                 "label": category,
                 "data": values,

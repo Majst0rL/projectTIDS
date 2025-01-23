@@ -3,6 +3,7 @@ from .services.event_bus import publish_event
 
 bp = Blueprint('rabbitmq', __name__)
 
+
 @bp.route('/rabbitmq', methods=['GET', 'POST'])
 def rabbitmq_demo():
     if request.method == 'POST':
